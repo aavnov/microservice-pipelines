@@ -23,6 +23,8 @@ def packageArtifact(){
 
 def buildAndTest(){
     stage("Backend tests"){
-        sh "mvn test"
+        withMaven(maven: 'mvn') {
+            sh "mvn test"
+        }
     }
 }
