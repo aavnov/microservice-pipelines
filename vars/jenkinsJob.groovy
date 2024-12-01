@@ -15,9 +15,9 @@ def call(){
 
 def packageArtifact(){
     stage("Package artifact") {
-        withMaven(maven: 'mvn') {
+//        withMaven(maven: 'mvn') {
             sh "mvn package"
-        }
+//        }
     }
 }
 
