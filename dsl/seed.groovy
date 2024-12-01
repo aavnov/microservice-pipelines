@@ -18,11 +18,12 @@ def createDeploymentJob(jobName, repoUrl) {
         }
     }
 }
-/*
+
 def createTestJob(jobName, repoUrl) {
     multibranchPipelineJob(jobName) {
         branchSources {
             git {
+                id 'job name'
                 remote(repoUrl)
                 includes('*')
             }
@@ -32,7 +33,7 @@ def createTestJob(jobName, repoUrl) {
         }
     }
 }
-*/
+
 def buildPipelineJobs() {
     def repo = "https://github.com/aavnov/"
     def repoUrl = repo + jobName + ".git"
