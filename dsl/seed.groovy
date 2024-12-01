@@ -18,7 +18,7 @@ def createDeploymentJob(jobName, repoUrl) {
         }
     }
 }
-
+/*
 def createTestJob(jobName, repoUrl) {
     multibranchPipelineJob(jobName) {
         branchSources {
@@ -32,7 +32,7 @@ def createTestJob(jobName, repoUrl) {
         }
     }
 }
-
+*/
 def buildPipelineJobs() {
     def repo = "https://github.com/aavnov/"
     def repoUrl = repo + jobName + ".git"
@@ -40,7 +40,7 @@ def buildPipelineJobs() {
     def testName = jobName + "_test"
 
     createDeploymentJob(deployName, repoUrl)
-    createTestJob(testName, repoUrl)
+//    createTestJob(testName, repoUrl)
 }
 
 buildPipelineJobs()
