@@ -14,11 +14,10 @@ def call(){
 }
 
 def packageArtifact(){
-    tools {
-        maven 'Maven mvn'
-    }
     stage("Package artifact") {
-        sh "mvn package"
+        with(maven: 'mvn') {
+            sh "mvn package"
+        }
     }
 }
 
