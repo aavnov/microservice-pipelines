@@ -14,6 +14,9 @@ def call(){
 }
 
 def packageArtifact(){
+    tools {
+        maven 'Maven mvn'
+    }
     stage("Package artifact") {
         sh "mvn package"
     }
